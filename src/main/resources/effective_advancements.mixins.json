@@ -1,0 +1,16 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "io.github.KacyBiscuit.effective_advancements.mixin",
+  "compatibilityLevel": "JAVA_8",
+  "mixins": [
+    "PlayerAdvancementTrackerMixin",
+    "MilkBucketItemMixin",
+    "LivingEntityMixin"
+  ],
+  "client": [],
+  "server": [],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

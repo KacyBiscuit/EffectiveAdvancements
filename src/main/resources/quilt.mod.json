@@ -1,0 +1,45 @@
+{
+	"schema_version": 1,
+	"quilt_loader": {
+		"group": "io.github.KacyBiscuit",
+		"id": "effective_advancements",
+		"version": "${version}",
+		"metadata": {
+			"name": "Effective Advancements!",
+			"description": "Provides positive effects when you gain advancements and negative effects when you die.",
+			"contributors": {
+				"KacyBiscuit aka StarlytKaitlyn aka KaitlynEthylia": "Owner"
+			},
+			"contact": {
+				"homepage": "https://github.com/KacyBiscuit",
+				"issues": "https://github.com/KacyBiscuit/EffectiveAdvancements/issues",
+				"sources": "https://github.com/KacyBiscuit/EffectiveAdvancements"
+			},
+			"icon": "assets/effective_advancements/icon.png"
+		},
+		"intermediate_mappings": "net.fabricmc:intermediary",
+		"entrypoints": {
+			"init": "io.github.KacyBiscuit.effective_advancements.EffectiveAdvancements",
+			"cardinal-components": "io.github.KacyBiscuit.effective_advancements.StatusEffectComponents",
+			"modmenu": [ "io.github.KacyBiscuit.effective_advancements.config.EffectiveConfigScreen" ]
+		},
+		"depends": [
+			{
+				"id": "quilt_loader",
+				"versions": ">=0.17.0-"
+			},
+			{
+				"id": "quilted_fabric_api",
+				"versions": ">=2.0.0-"
+			},
+			{
+				"id": "minecraft",
+				"versions": ">=1.19"
+			}
+		]
+	},
+	"cardinal-components": [
+		"effective_advancements:manager"
+	],
+	"mixin": "effective_advancements.mixins.json"
+}
