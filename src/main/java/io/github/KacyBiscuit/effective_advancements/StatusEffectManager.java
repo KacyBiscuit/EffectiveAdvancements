@@ -32,9 +32,6 @@ public class StatusEffectManager implements Component, ServerTickingComponent {
 
 	public void grant(boolean debuff) {
 		add(randomEffect(debuff));
-		for(AdvancementEffect effect : effects) {
-			System.out.println(effect);
-		}
 	}
 	public void revoke(boolean debuff) {
 		boolean complete = false;
@@ -49,9 +46,7 @@ public class StatusEffectManager implements Component, ServerTickingComponent {
 
 	public void clearType(boolean debuff) {
 		effects.forEach((effect) -> {
-			System.out.println(effect.isDebuff());
 			if(effect.isDebuff() == debuff) {
-				System.out.println(1);
 				remove(effect.getType(), true, false);
 			}
 		});

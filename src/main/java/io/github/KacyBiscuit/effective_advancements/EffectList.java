@@ -10,8 +10,6 @@ import org.quiltmc.config.api.values.ValueMap;
 
 import java.util.ArrayList;
 import java.util.Map;
-import java.util.Objects;
-import java.util.function.Consumer;
 
 public class EffectList extends ArrayList<AdvancementEffect> {
 	public ArrayList<AdvancementEffect> toRemove = new ArrayList<>();
@@ -63,6 +61,9 @@ public class EffectList extends ArrayList<AdvancementEffect> {
 
 	public boolean has(StatusEffect effect) {
 		for(AdvancementEffect advancementEffect : this) {
+			if(advancementEffect.getType() == null) {
+				break;
+			}
 			if(advancementEffect.getType().equals(effect)) {
 				return true;
 			}

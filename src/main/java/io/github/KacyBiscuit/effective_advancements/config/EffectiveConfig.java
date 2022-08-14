@@ -8,7 +8,7 @@ import org.quiltmc.config.api.values.ValueMap;
 public class EffectiveConfig extends WrappedConfig {
 
 	@Comment("The Advancements that cause random buffs to be applied.")
-	public final ValueList<String> advancementList = ValueList.create("",
+	public final ValueList<String> advancementList = ValueList.create("Advancement",
 			"story/obtain_armor",
 			"story/form_obsidian",
 			"story/mine_diamond",

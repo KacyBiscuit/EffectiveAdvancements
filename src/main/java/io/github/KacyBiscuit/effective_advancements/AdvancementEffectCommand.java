@@ -45,18 +45,6 @@ public class AdvancementEffectCommand {
 
 
 		});
-/*
-		CommandRegistrationCallback.EVENT.register(((dispatcher, buildContext, environment) -> {
-			dispatcher.register(literal("debug")
-					.executes((context -> {
-						StatusEffectManager manager = context.getSource().getPlayer().getComponent(StatusEffectComponents.MANAGER);
-						for (AdvancementEffect effect: manager.advancementEffects) {
-							System.out.println(effect.toString());
-						}
-						return 1;
-					})));
-		}));
-*/
 	}
 
 	private static int action(CommandContext<ServerCommandSource> context, boolean remove, boolean debuff, boolean random, int everything) throws CommandSyntaxException {
