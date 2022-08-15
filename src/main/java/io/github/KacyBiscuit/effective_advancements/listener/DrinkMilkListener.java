@@ -11,7 +11,6 @@ public class DrinkMilkListener {
 	public static void register() {
 		DrinkMilkCallback.EVENT.register(player -> {
 			StatusEffectManager manager = StatusEffectComponents.MANAGER.get(player);
-			System.out.println(EffectiveConfigManager.MILK_MODE.value());
 			switch(EffectiveConfigManager.MILK_MODE.value()) {
 				case NO_EFFECT:
 					break;

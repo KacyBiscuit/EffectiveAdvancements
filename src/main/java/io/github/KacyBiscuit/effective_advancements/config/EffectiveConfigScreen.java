@@ -45,6 +45,11 @@ public class EffectiveConfigScreen  implements ModMenuApi {
 					.setTooltip(Text.translatable("effectiveAdvancements.config.totem.tooltip"))
 					.setSaveConsumer(newValue -> EffectiveConfigManager.TOTEM_MODE.setValue(newValue, true))
 					.build());
+			settings.addEntry(entryBuilder.startSelector(Text.translatable("effectiveAdvancements.config.apple.name"), EffectiveConfigEnums.PositiveModes.values(), EffectiveConfigManager.APPLE_MODE.value())
+					.setDefaultValue(EffectiveConfigManager.APPLE_MODE.getDefaultValue())
+					.setTooltip(Text.translatable("effectiveAdvancements.config.apple.tooltip"))
+					.setSaveConsumer(newValue -> EffectiveConfigManager.APPLE_MODE.setValue(newValue, true))
+					.build());
 			settings.addEntry(entryBuilder.startStrList(Text.translatable("effectiveAdvancements.config.advancements.name"), EffectiveConfigManager.ADVANCEMENT_LIST.value())
 					.setDefaultValue(EffectiveConfigManager.ADVANCEMENT_LIST.getDefaultValue())
 					.setTooltip(Text.translatable("effectiveAdvancements.config.advancements.tooltip"))

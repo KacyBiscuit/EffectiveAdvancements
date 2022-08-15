@@ -7,6 +7,7 @@ import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.nbt.NbtCompound;
 import net.minecraft.nbt.NbtElement;
+import org.jetbrains.annotations.NotNull;
 
 import java.util.*;
 
@@ -35,12 +36,14 @@ public class StatusEffectManager implements Component, ServerTickingComponent {
 	}
 	public void revoke(boolean debuff) {
 		boolean complete = false;
-		while(!complete) {
+		int limit = 0;
+		while(!complete && limit < 10) {
 			StatusEffect effect = randomEffect(debuff);
 			if(effects.has(effect)) {
 				remove(effect, false, true);
 				complete = true;
 			}
+			limit++;
 		}
 	}
 
@@ -71,14 +74,11 @@ public class StatusEffectManager implements Component, ServerTickingComponent {
 
 	@Override
 	public void readFromNbt(NbtCompound tag) {
-		if(EffectList.fromNbt(tag.getList("effects", NbtElement.COMPOUND_TYPE)) != null) {
-			this.effects = EffectList.fromNbt(tag.getList("effects", NbtElement.COMPOUND_TYPE));
-		} else {
-			this.effects = new EffectList();
-		}
+		this.effects = EffectList.fromNbt(tag.getList("effects", NbtElement.COMPOUND_TYPE));
 	}
+
 	@Override
-	public void writeToNbt(NbtCompound tag) {
+	public void writeToNbt(@NotNull NbtCompound tag) {
 		if(effects != null) {
 			tag.put("effects", effects.asNbt());
 		} else {

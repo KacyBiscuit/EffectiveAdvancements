@@ -10,8 +10,8 @@ import net.minecraft.util.ActionResult;
 public class GoldenAppleListener {
 	public static void register() {
 		GoldenAppleCallback.EVENT.register(player -> {
+			System.out.println(4);
 			StatusEffectManager manager = StatusEffectComponents.MANAGER.get(player);
-			System.out.println(EffectiveConfigManager.MILK_MODE.value());
 			switch(EffectiveConfigManager.APPLE_MODE.value()) {
 				case NO_EFFECT:
 					break;
