@@ -19,5 +19,6 @@ public class EffectiveConfigManager {
 	public static final TrackedValue<EffectiveConfigEnums.PositiveModes> MILK_MODE = (TrackedValue<EffectiveConfigEnums.PositiveModes>) CONFIG.getValue(List.of("milkMode"));
 	public static final TrackedValue<EffectiveConfigEnums.NegativeModes> DEATH_MODE = (TrackedValue<EffectiveConfigEnums.NegativeModes>) CONFIG.getValue(List.of("deathMode"));
 	public static final TrackedValue<EffectiveConfigEnums.PositiveModes> TOTEM_MODE = (TrackedValue<EffectiveConfigEnums.PositiveModes>) CONFIG.getValue(List.of("totemMode"));
+	public static final TrackedValue<EffectiveConfigEnums.PositiveModes> APPLE_MODE = (TrackedValue<EffectiveConfigEnums.PositiveModes>) CONFIG.getValue(List.of("appleMode"));
 	public static final TrackedValue<Integer> PERMISSION_LEVEL = (TrackedValue<Integer>) CONFIG.getValue(List.of("permissionLevel"));
 }

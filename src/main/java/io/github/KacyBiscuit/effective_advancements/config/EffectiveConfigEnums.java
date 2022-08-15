@@ -4,7 +4,8 @@ public class EffectiveConfigEnums {
 	public enum PositiveModes implements ConfigEnum{
 		NO_EFFECT,
 		REMOVE_EFFECTS,
-		REMOVE_DEBUFFS;
+		REMOVE_DEBUFFS,
+		REMOVE_DEBUFF;
 
 		@Override
 		public Enum<?> next() {

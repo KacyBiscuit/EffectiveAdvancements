@@ -18,6 +18,9 @@ public class EffectList extends ArrayList<AdvancementEffect> {
 	}
 	public EffectList(ValueMap<Integer> list, boolean debuff) {
 		for(Map.Entry<String, Integer> pair : list) {
+			if(Registry.STATUS_EFFECT.get(new Identifier(pair.getKey())) == null) {
+				continue;
+			}
 			add(new AdvancementEffect(Registry.STATUS_EFFECT.get(new Identifier(pair.getKey())), pair.getValue(), debuff));
 		}
 	}

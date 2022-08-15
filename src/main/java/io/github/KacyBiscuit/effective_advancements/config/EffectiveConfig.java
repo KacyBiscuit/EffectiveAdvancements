@@ -75,6 +75,7 @@ public class EffectiveConfig extends WrappedConfig {
 			"NO_EFFECT": Nothing changes.
 			"REMOVE_EFFECTS": Removes all advancement effects from the player.
 			"REMOVE_DEBUFFS": Removes all debuffs from the player.
+			"REMOVE_DEBUFF": Removes a single random debuff from the player
 			""")
 	public final EffectiveConfigEnums.PositiveModes milkMode = EffectiveConfigEnums.PositiveModes.NO_EFFECT;
 
@@ -85,15 +86,25 @@ public class EffectiveConfig extends WrappedConfig {
 			"REMOVE_RANDOM": Removes a random buff from the player.
 			"RANDOM_DEBUFF": Adds a random debuff to the player.
 			""")
-	public final EffectiveConfigEnums.NegativeModes deathMode = EffectiveConfigEnums.NegativeModes.NO_EFFECT;
+	public final EffectiveConfigEnums.NegativeModes deathMode = EffectiveConfigEnums.NegativeModes.RANDOM_DEBUFF;
 
 	@Comment("""
 			Defines how the player's effects will change when a Totem of Undying is activated:
 			"NO_EFFECT": Nothing changes.
 			"REMOVE_EFFECTS": Removes all advancement effects from the player.
 			"REMOVE_DEBUFFS": Removes all debuffs from the player.
+			"REMOVE_DEBUFF": Removes a single random debuff from the player
 			""")
-	public final EffectiveConfigEnums.PositiveModes totemMode = EffectiveConfigEnums.PositiveModes.NO_EFFECT;
+	public final EffectiveConfigEnums.PositiveModes totemMode = EffectiveConfigEnums.PositiveModes.REMOVE_DEBUFFS;
+
+	@Comment("""
+			Defines how the player's effects will change when a food is eaten that grants effects, such as a golden apple:
+			"NO_EFFECT": Nothing changes.
+			"REMOVE_EFFECTS": Removes all advancement effects from the player.
+			"REMOVE_DEBUFFS": Removes all debuffs from the player.
+			"REMOVE_DEBUFF": Removes a single random debuff from the player
+			""")
+	public final EffectiveConfigEnums.PositiveModes appleMode = EffectiveConfigEnums.PositiveModes.REMOVE_DEBUFF;
 
 	@Comment("The permission level required to run the /advancementEffect command.")
 	public final int permissionLevel = 3;

@@ -87,6 +87,9 @@ public class StatusEffectManager implements Component, ServerTickingComponent {
 	}
 	@Override
 	public void serverTick() {
+		if(player == null) {
+			return;
+		}
 		if(player.isAlive() && effects != null) {
 			applyEffects();
 		}

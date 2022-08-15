@@ -21,6 +21,9 @@ public class DrinkMilkListener {
 				case REMOVE_DEBUFFS:
 					manager.clearType(true);
 					break;
+				case REMOVE_DEBUFF:
+					manager.revoke(true);
+					break;
 			}
 			return ActionResult.PASS;
 		});

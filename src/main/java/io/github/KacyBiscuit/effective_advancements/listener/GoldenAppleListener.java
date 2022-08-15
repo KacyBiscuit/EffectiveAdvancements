@@ -1,17 +1,18 @@
 package io.github.KacyBiscuit.effective_advancements.listener;
 
-import io.github.KacyBiscuit.effective_advancements.EffectiveAdvancements;
 import io.github.KacyBiscuit.effective_advancements.StatusEffectComponents;
 import io.github.KacyBiscuit.effective_advancements.StatusEffectManager;
-import io.github.KacyBiscuit.effective_advancements.callback.TotemUseCallback;
+import io.github.KacyBiscuit.effective_advancements.callback.DrinkMilkCallback;
+import io.github.KacyBiscuit.effective_advancements.callback.GoldenAppleCallback;
 import io.github.KacyBiscuit.effective_advancements.config.EffectiveConfigManager;
 import net.minecraft.util.ActionResult;
 
-public class TotemUseListener {
+public class GoldenAppleListener {
 	public static void register() {
-		TotemUseCallback.EVENT.register((player) -> {
+		GoldenAppleCallback.EVENT.register(player -> {
 			StatusEffectManager manager = StatusEffectComponents.MANAGER.get(player);
-			switch(EffectiveConfigManager.TOTEM_MODE.value()) {
+			System.out.println(EffectiveConfigManager.MILK_MODE.value());
+			switch(EffectiveConfigManager.APPLE_MODE.value()) {
 				case NO_EFFECT:
 					break;
 				case REMOVE_EFFECTS:
