@@ -4,11 +4,13 @@
   "effectiveAdvancements.config.amplify.name" : "Amplify Effects",
   "effectiveAdvancements.config.amplify.tooltip" : "If someone randomly rolls an effect they already have it will amplify it until its at it's maximum amplifier",
   "effectiveAdvancements.config.milk.name" : "Milk Mode",
-  "effectiveAdvancements.config.milk.tooltip" : "Defines how the player's effects will change when a Bucket of Milk is drunk:\n\"NO_EFFECT\": Nothing changes.\n\"REMOVE_EFFECTS\": Removes all advancement effects from the player.\n\"REMOVE_DEBUFFS\": Removes all debuffs from the player.",
+  "effectiveAdvancements.config.milk.tooltip" : "Defines how the player's effects will change when a Bucket of Milk is drunk:\n\"NO_EFFECT\": Nothing changes.\n\"REMOVE_EFFECTS\": Removes all advancement effects from the player.\n\"REMOVE_DEBUFFS\": Removes all debuffs from the player.\n\"REMOVE_DEBUFF\": Removes a single random debuff from the player.",
   "effectiveAdvancements.config.death.name" : "Death Mode",
   "effectiveAdvancements.config.death.tooltip" : "Defines how the player's effects will change when a player dies:\n\"NO_EFFECT\": Nothing changes.\n\"REMOVE_EFFECTS\": Removes all advancement effects from the player.\n\"REMOVE_RANDOM\": Removes a random buff from the player.\n\"RANDOM_DEBUFF\": Adds a random debuff to the player.",
   "effectiveAdvancements.config.totem.name" : "Totem Mode",
-  "effectiveAdvancements.config.totem.tooltip" : "Defines how the player's effects will change when a Totem of Undying is activated:\n\"NO_EFFECT\": Nothing changes.\n\"REMOVE_EFFECTS\": Removes all advancement effects from the player.\n\"REMOVE_DEBUFFS\": Removes all debuffs from the player.",
+  "effectiveAdvancements.config.totem.tooltip" : "Defines how the player's effects will change when a Totem of Undying is activated:\n\"NO_EFFECT\": Nothing changes.\n\"REMOVE_EFFECTS\": Removes all advancement effects from the player.\n\"REMOVE_DEBUFFS\": Removes all debuffs from the player.\n\"REMOVE_DEBUFF\": Removes a single random debuff from the player.",
+  "effectiveAdvancements.config.apple.name" : "Apple Mode",
+  "effectiveAdvancements.config.apple.tooltip" : "Defines how the player's effects will change when a food is eaten that grants effects, such as a golden apple:\n\"NO_EFFECT\": Nothing changes.\n\"REMOVE_EFFECTS\": Removes all advancement effects from the player.\n\"REMOVE_DEBUFFS\": Removes all debuffs from the player.\n\"REMOVE_DEBUFF\": Removes a single random debuff from the player.",
   "effectiveAdvancements.config.advancements.name" : "Advancement List",
   "effectiveAdvancements.config.advancements.tooltip" : "List the advancements that people may get buffs from."
 }
